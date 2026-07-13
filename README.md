@@ -32,20 +32,17 @@ mvn exec:java
 Expected Output
 
 Order summary
-
----
-
+========================
 Order ID: 1
 Customer: Claudelle Francis
 Email: claudelle.francis@umuzi.org
-
----
-
-Items:
- - Monitor | x1 | R6000
- - Wireless Mouse | x2 | R400
 ========================
-Total: R6400
+Items:
+ - Monitor | QTY: x1 | R6000
+ - Wireless Mouse | QTY: x2 | R400
+ - Ergonomic Keyboard | QTY: x1 | R1000
+========================
+Total: R7400
 ========================
 
 ---

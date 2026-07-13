@@ -50,41 +50,36 @@ Total: R6400
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
-MERCHANT-ORDER-DESK-AND-CATALOGUE-ENGINE/
+```text
+merchant-order-desk-and-catalogue-engine/
 ├── .github/
 ├── .vscode/
 ├── src/
-│   ├── main/java/
-│   │   ├── app/
-│   │   │   └── PayNestApplication.java
-│   │   ├── domain/
-│   │   │   ├── Customer.java
-│   │   │   ├── Order.java
-│   │   │   ├── OrderItem.java
-│   │   │   └── Product.java
-│   │   └── service/
-│   │       └── OrderService.java
-│   │
-│   └── test/java/
-│       ├── domain/
-│       │   ├── OrderItemTest.java
-│       │   ├── OrderItemValidationTest.java
-│       │   └── OrderTest.java
-│       └── service/
-│           └── OrderServiceTest.java
-│
-├── target/
-│   ├── classes/
-│   ├── generated-sources/
-│   ├── generated-test-sources/
-│   ├── maven-status/
-│   ├── surefire-reports/
-│   └── test-classes/
-│
+│   ├── main/
+│   │   └── java/
+│   │       ├── app/
+│   │       │   └── PayNestApplication.java
+│   │       ├── domain/
+│   │       │   ├── Customer.java
+│   │       │   ├── Order.java
+│   │       │   ├── OrderItem.java
+│   │       │   └── Product.java
+│   │       └── service/
+│   │           └── OrderService.java
+│   └── test/
+│       └── java/
+│           ├── domain/
+│           │   ├── OrderItemTest.java
+│           │   ├── OrderItemValidationTest.java
+│           │   └── OrderTest.java
+│           └── service/
+│               └── OrderServiceTest.java
+├── .gitignore
 ├── pom.xml
 └── README.md
+```
 
 ---
 

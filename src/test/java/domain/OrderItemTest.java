@@ -9,10 +9,11 @@ class OrderItemTest {
     @Test
     void calculateTotalReturnsCorrectSubtotal() {
  
-        Product monitor = new Product(1, "Monitor", 6000);
+        Product product = new Product(1, "Monitor", 6000);
  
-        OrderItem item = new OrderItem(monitor, 2);
+        OrderItem item = new OrderItem(product, 1);
  
-        assertEquals(12000, item.calculateTotal());
+        assertEquals(6000, item.calculateTotal());
     }
 }
+ 

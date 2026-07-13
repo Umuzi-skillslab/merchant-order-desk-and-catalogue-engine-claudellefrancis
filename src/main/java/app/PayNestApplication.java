@@ -19,7 +19,7 @@ public class PayNestApplication {
         OrderService orderService = new OrderService();
         orderService.addProductsToOrder(order, monitor, 1);
         orderService.addProductsToOrder(order, wirelessMouse, 2);
-        orderService.addProductsToOrder(order, ergonicKeyboard, 1);
+        orderService.addProductsToOrder(order, ergonomicKeyboard, 1);
 
         order.printSummary();
 

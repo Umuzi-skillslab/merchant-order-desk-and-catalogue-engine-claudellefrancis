@@ -41,8 +41,11 @@ Items:
  - Monitor | QTY: x1 | R6000
  - Wireless Mouse | QTY: x2 | R400
  - Ergonomic Keyboard | QTY: x1 | R1000
+
 ========================
+
 Total: R7400
+
 ========================
 
 ---

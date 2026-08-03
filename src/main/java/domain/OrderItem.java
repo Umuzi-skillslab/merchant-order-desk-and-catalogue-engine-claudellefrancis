@@ -1,8 +1,11 @@
 package domain;
 
+import java.util.Objects;
+
 public record OrderItem(Product product, int quantity) {
 
     public OrderItem {
+        Objects.requireNonNull(product, "Product must not be null");
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be positive");
         }
@@ -10,12 +13,5 @@ public record OrderItem(Product product, int quantity) {
 
     public double calculateTotal() {
         return product.getPrice() * quantity;
-    }
-
-    public Object Product() {
-        return product;
-    }
-    public Object getQuantity() {
-        return quantity;
     }
 }

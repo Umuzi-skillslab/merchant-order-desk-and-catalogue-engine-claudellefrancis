@@ -2,6 +2,7 @@ package app;
 
 import domain.Customer;
 import domain.Order;
+import domain.OrderSummaryFormatter;
 import domain.Product;
 import service.OrderService;
 
@@ -17,12 +18,11 @@ public class PayNestApplication {
         Order order = new Order(1, customer);
 
         OrderService orderService = new OrderService();
-        orderService.addProductsToOrder(order, monitor, 1);
-        orderService.addProductsToOrder(order, wirelessMouse, 2);
-        orderService.addProductsToOrder(order, ergonomicKeyboard, 1);
+        orderService.addProductToOrder(order, monitor, 1);
+        orderService.addProductToOrder(order, wirelessMouse, 2);
+        orderService.addProductToOrder(order, ergonomicKeyboard, 1);
 
-        order.printSummary();
-
-        
+        OrderSummaryFormatter formatter = new OrderSummaryFormatter();
+        System.out.println(formatter.format(order));
     }
 }

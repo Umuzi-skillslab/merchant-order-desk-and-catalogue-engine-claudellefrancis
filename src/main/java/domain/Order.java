@@ -1,8 +1,9 @@
 package domain;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 
 public class Order {
 
@@ -11,15 +12,15 @@ public class Order {
     private final List<OrderItem> items;
 
     public Order(int id, Customer customer) {
+        if (id <= 0) {
+            throw new IllegalArgumentException("Order ID must be positive");
+        }
         this.id = id;
-        this.customer = customer;
+        this.customer = Objects.requireNonNull(customer, "Customer must not be null");
         this.items = new ArrayList<>();
     }
 
     public void addItem(Product product, int quantity) {
-        if (quantity <= 0) {
-            throw new IllegalArgumentException("Quantity must be positive");
-        }
         items.add(new OrderItem(product, quantity));
     }
 
@@ -31,24 +32,15 @@ public class Order {
         return total;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public List<OrderItem> getItems() {
         return Collections.unmodifiableList(items);
     }
-
-    public void printSummary() {
-        System.out.println("Order summary");
-        System.out.println("========================");
-        System.out.println("Order ID: " + id);
-        System.out.println("Customer: " + customer.name());
-        System.out.println("Email: " + customer.email());
-        System.out.println("========================");
-        System.out.println("Items:");
-        for (OrderItem item : items) {
-            System.out.println(" - " + item.product().getName() + " | QTY: " + item.quantity() + " | R" + String.format("%.0f", item.calculateTotal()));
-        }
-        System.out.println("========================");
-        System.out.println("Total: R" + String.format("%.0f", calculateTotal()));
-        System.out.println("========================");
-    }
-    
 }

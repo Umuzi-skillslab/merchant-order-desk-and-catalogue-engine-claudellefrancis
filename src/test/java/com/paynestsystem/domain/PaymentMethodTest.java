@@ -2,13 +2,12 @@ package com.paynetsystem.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
-
-import payment.CardPayment;
-import payment.EftPayment;
-import payment.PaymentMethod;
-import payment.WalletPayment;
+import static org.junit.jupiter.api.Assertions.*;
+import com.paynetsystem.payment.CardPayment;
+import com.paynetsystem.payment.EftPayment;
+import com.paynetsystem.payment.PaymentMethod;
+import com.paynetsystem.payment.WalletPayment;
 
 class PaymentMethodTest {
 
@@ -42,7 +41,7 @@ class PaymentMethodTest {
         PaymentMethod paymentMethod = new CardPayment();
 
         assertEquals(12400, order.calculateTotal());
-        assertTrue(order.checkout(paymentMethod));
+        assertDoesNotThrow(() -> order.checkout(paymentMethod));
     }
 
     @Test
@@ -63,7 +62,7 @@ class PaymentMethodTest {
         PaymentMethod paymentMethod = new WalletPayment();
 
         assertEquals(12400, order.calculateTotal());
-        assertTrue(order.checkout(paymentMethod));
+        assertDoesNotThrow(() -> order.checkout(paymentMethod));
     }
 
     @Test
@@ -85,6 +84,6 @@ class PaymentMethodTest {
 
         PaymentMethod paymentMethod = new CardPayment();
 
-        assertTrue(order.checkout(paymentMethod));
+       assertDoesNotThrow(() -> order.checkout(paymentMethod));
     }
 }

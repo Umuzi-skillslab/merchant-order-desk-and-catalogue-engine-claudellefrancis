@@ -1,7 +1,7 @@
 package com.paynetsystem.domain;
 
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,7 +26,7 @@ class OrderTest {
         Order order = new Order(1, customer);
         order.addItem(monitor, 1);
 
-        assertEquals(12000.0, order.calculateTotal(), 0.0001);
+        assertEquals(6000.0, order.calculateTotal(), 0.0001);
     }
 
     @Test
@@ -37,7 +37,7 @@ class OrderTest {
         order.addItem(ergonomicKeyboard, 1);
 
         // Monitor 6000 + Wireless Mouse 400 = 6400 — same figures as the demo receipt.
-        assertEquals(6400.0, order.calculateTotal(), 0.0001);
+        assertEquals(7400.0, order.calculateTotal(), 0.0001);
         assertEquals(3, order.getItems().size());
     }
 

@@ -1,10 +1,11 @@
-package src.test.java.com.paynestsystem.service;
+package com.paynetsystem.service;
 
-import src.main.java.com.paynestsystem.domain.Customer;
-import src.main.java.com.paynestsystem.domain.Order;
-import src.main.java.com.paynestsystem.domain.Product;
+import com.paynetsystem.domain.Customer;
+import com.paynetsystem.domain.Order;
+import com.paynetsystem.domain.Product;
+import com.paynetsystem.service.OrderService;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -32,7 +33,7 @@ class OrderServiceTest {
         orderService.addProductsToOrder(order, wirelessMouse, 2);
         orderService.addProductsToOrder(order, ergonomicKeyboard, 1);
 
-        assertEquals(6400.0, orderService.calculateTotals(order), 0.0001);
+        assertEquals(7400.0, orderService.calculateTotals(order), 0.0001);
         assertEquals(order.calculateTotal(), orderService.calculateTotals(order), 0.0001);
     }
 

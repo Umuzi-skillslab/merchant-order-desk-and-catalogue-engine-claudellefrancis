@@ -25,7 +25,11 @@ Run unit tests
 mvn test
 
 Run the application
+<<<<<<< HEAD
 mvn exec:java
+=======
+mvn exec:java -Dexec.mainClass="com.paynestsystem.app.PayNestApplication"
+>>>>>>> 2e8b9eb (Updated files)
 
 ---
 
@@ -40,11 +44,18 @@ Email: claudelle.francis@umuzi.org
 Items:
  - Monitor | QTY: x1 | R6000
  - Wireless Mouse | QTY: x2 | R400
+<<<<<<< HEAD
  - Ergonomic Keyboard | QTY: x1 | R1000
 
 ========================
 
 Total: R7400
+=======
+
+========================
+
+Total: R6400
+>>>>>>> 2e8b9eb (Updated files)
 
 ========================
 

@@ -1,4 +1,4 @@
-package com.paynestsystem.payment;
+package com.PayNestApplication.payment;
 
 /**
  * Interface for payment methods supported by PayNest.

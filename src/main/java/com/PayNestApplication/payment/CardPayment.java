@@ -1,10 +1,10 @@
-package com.paynestsystem.payment;
+package com.PayNestApplication.payment;
 
 /**
- * Payment via digital wallet (e.g. PayNest Wallet).
- * Simulates a successful wallet payment (no real processing).
+ * Payment via credit or debit card.
+ * Simulates a successful card payment (no real processing).
  */
-public class WalletPayment implements PaymentMethod {
+public class CardPayment implements PaymentMethod {
 
     @Override
     public boolean processPayment(double amount) {
@@ -14,6 +14,6 @@ public class WalletPayment implements PaymentMethod {
 
     @Override
     public String getPaymentType() {
-        return "WALLET";
+        return "CARD";
     }
 }

@@ -1,10 +1,10 @@
-package com.paynestsystem.payment;
+package com.PayNestApplication.payment;
 
 /**
- * Payment via Electronic Funds Transfer (EFT).
- * Simulates a successful EFT payment (no real processing).
+ * Payment via digital wallet (e.g. PayNest Wallet).
+ * Simulates a successful wallet payment (no real processing).
  */
-public class EftPayment implements PaymentMethod {
+public class WalletPayment implements PaymentMethod {
 
     @Override
     public boolean processPayment(double amount) {
@@ -14,6 +14,6 @@ public class EftPayment implements PaymentMethod {
 
     @Override
     public String getPaymentType() {
-        return "EFT";
+        return "WALLET";
     }
 }

@@ -1,10 +1,10 @@
-package com.paynestsystem.payment;
+package com.PayNestApplication.payment;
 
 /**
- * Payment via credit or debit card.
- * Simulates a successful card payment (no real processing).
+ * Payment via Electronic Funds Transfer (EFT).
+ * Simulates a successful EFT payment (no real processing).
  */
-public class CardPayment implements PaymentMethod {
+public class EftPayment implements PaymentMethod {
 
     @Override
     public boolean processPayment(double amount) {
@@ -14,6 +14,6 @@ public class CardPayment implements PaymentMethod {
 
     @Override
     public String getPaymentType() {
-        return "CARD";
+        return "EFT";
     }
 }

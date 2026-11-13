@@ -1,4 +1,4 @@
-package com.paynestsystem.domain;
+package com.PayNestApplication.domain;
 
 public class Product {
 

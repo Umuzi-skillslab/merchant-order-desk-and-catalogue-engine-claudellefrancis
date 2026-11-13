@@ -1,8 +1,8 @@
-package service;
+package com.PayNestApplication.service;
 
-import domain.Customer;
-import domain.Order;
-import domain.Product;
+import com.PayNestApplication.domain.Customer;
+import com.PayNestApplication.domain.Order;
+import com.PayNestApplication.domain.Product;
 
 public class OrderService {
 

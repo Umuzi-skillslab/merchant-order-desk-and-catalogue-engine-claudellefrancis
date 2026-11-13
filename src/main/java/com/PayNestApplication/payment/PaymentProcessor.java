@@ -1,4 +1,4 @@
-package com.paynestsystem.payment;
+package com.PayNestApplication.payment;
 
 /**
  * Processes payments using any PaymentMethod implementation.

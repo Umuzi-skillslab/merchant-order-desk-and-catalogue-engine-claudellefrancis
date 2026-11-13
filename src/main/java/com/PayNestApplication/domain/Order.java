@@ -1,7 +1,7 @@
-package com.paynestsystem.domain;
+package com.PayNestApplication.domain;
 
-import com.paynestsystem.payment.PaymentMethod;
-import com.paynestsystem.payment.PaymentProcessor;
+import com.PayNestApplication.payment.PaymentMethod;
+import com.PayNestApplication.payment.PaymentProcessor;
 
 import java.util.ArrayList;
 import java.util.List;

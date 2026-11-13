@@ -1,11 +1,11 @@
 package com.paynestsystem.app;
 
-import com.paynestsystem.domain.Customer;
-import com.paynestsystem.domain.Order;
-import com.paynestsystem.domain.Product;
-import com.paynestsystem.payment.PaymentMethod;
-import com.paynestsystem.payment.WalletPayment;
-import com.paynestsystem.service.OrderService;
+import domain.Customer;
+import domain.Order;
+import domain.Product;
+import payment.PaymentMethod;
+import payment.Payflex;
+import service.OrderService;
 
 public class PayNestApplication {
 

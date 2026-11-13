@@ -1,9 +1,8 @@
-package service;
+package com.PayNestApplication.service;
 
 import com.PayNestApplication.domain.Customer;
 import com.PayNestApplication.domain.Order;
 import com.PayNestApplication.domain.Product;
-import com.PayNestApplication.service.OrderService;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -61,7 +61,22 @@ public class Order {
         return items;
     }
 
-    public void checkout(PaymentMethod paymentMethod) {
-        new PaymentProcessor().processPayment(paymentMethod, calculateTotal());
+    public boolean checkout(PaymentMethod paymentMethod) {
+        double grandTotal = calculateTotal();
+
+        boolean paymentSuccessful = new PaymentProcessor().processPayment(paymentMethod, grandTotal);
+
+        if (paymentSuccessful) {
+        System.out.println("================================");
+        System.out.println("ORDER COMPLETED SUCCESSFULLY!");
+        System.out.println("Order ID: " + id);
+        System.out.println("Payment Method: " + paymentMethod.getPaymentType());
+        System.out.println("Grand Total: R" + String.format("%.0f", grandTotal));
+        System.out.println("================================");
+    } else {
+        System.out.println("ORDER NOT COMPLETED - PAYMENT FAILED.");
+    }
+
+    return paymentSuccessful;
     }
 }

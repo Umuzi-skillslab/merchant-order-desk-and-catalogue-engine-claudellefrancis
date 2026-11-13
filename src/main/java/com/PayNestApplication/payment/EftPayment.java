@@ -1,14 +1,10 @@
 package com.PayNestApplication.payment;
 
-/**
- * Payment via Electronic Funds Transfer (EFT).
- * Simulates a successful EFT payment (no real processing).
- */
 public class EftPayment implements PaymentMethod {
 
     @Override
     public boolean processPayment(double amount) {
-        // Simulated: always succeeds. Students can extend here: add failure scenarios
+        System.out.println("Processing EFT payment of R" + String.format("%.0f", amount));
         return true;
     }
 

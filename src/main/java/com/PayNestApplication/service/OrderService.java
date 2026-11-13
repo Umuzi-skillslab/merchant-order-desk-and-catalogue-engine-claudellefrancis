@@ -14,7 +14,7 @@ public class OrderService {
         order.addItem(product, quantity);
     }
 
-    public void addProductsToOrder(Order order, Product product, int quantity) {
-        addProductToOrder(order, product, quantity);
+    public double calculateTotal(Order order) {
+        return order.calculateTotal();
     }
 }

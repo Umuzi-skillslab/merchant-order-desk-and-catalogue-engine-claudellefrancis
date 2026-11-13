@@ -5,7 +5,6 @@ public class Product {
     private final int id;
     private final String name;
     private final double price;
-    private int stockQuantity;
 
     public Product(int id, String name, double price) {
         this.id = id;
@@ -23,14 +22,6 @@ public class Product {
 
     public double getPrice() {
         return price;
-    }
-
-    public int getStockQuantity() {
-        return stockQuantity;
-    }
-
-    public void setStockQuantity(int stockQuantity) {
-        this.stockQuantity = stockQuantity;
     }
 
 }

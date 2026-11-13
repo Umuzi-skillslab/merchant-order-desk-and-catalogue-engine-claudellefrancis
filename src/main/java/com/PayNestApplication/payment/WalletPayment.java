@@ -1,14 +1,10 @@
 package com.PayNestApplication.payment;
 
-/**
- * Payment via digital wallet (e.g. PayNest Wallet).
- * Simulates a successful wallet payment (no real processing).
- */
 public class WalletPayment implements PaymentMethod {
 
     @Override
     public boolean processPayment(double amount) {
-        // Simulated: always succeeds. Students can extend here: add failure scenarios
+        System.out.println("Processing wallet payment of R" + String.format("%.0f", amount));
         return true;
     }
 

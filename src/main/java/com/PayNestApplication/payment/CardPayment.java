@@ -1,14 +1,10 @@
 package com.PayNestApplication.payment;
 
-/**
- * Payment via credit or debit card.
- * Simulates a successful card payment (no real processing).
- */
 public class CardPayment implements PaymentMethod {
 
     @Override
     public boolean processPayment(double amount) {
-        // Simulated: always succeeds. Students can extend here: add failure scenarios
+        System.out.println("Processing card payment of R" + String.format("%.0f", amount));
         return true;
     }
 

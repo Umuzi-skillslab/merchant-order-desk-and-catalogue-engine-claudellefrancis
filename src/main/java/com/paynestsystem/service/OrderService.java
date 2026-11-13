@@ -12,6 +12,14 @@ public class OrderService {
     }
 
     public void addProductsToOrder(Order order, Product product, int quantity) {
+
+        if(product == null) {
+            throw new IllegalArgumentException("Product cannot be null and quantity must be greater than zero.");
+        }
+
+        if(quantity > product.getStockQuantity()) {
+            throw new IllegalArgumentException("Quantity exceeds available stock.");
+        }
         order.addItem(product, quantity);
     }
 

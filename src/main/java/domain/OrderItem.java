@@ -1,17 +1,11 @@
-package com.paynetsystem.domain;
+package com.paynestsystem.domain;
 
 public class OrderItem {
 
     private final Product product;
     private final int quantity;
 
-       public OrderItem(Product product, int quantity) {
-        if (product == null) {
-            throw new IllegalArgumentException("Product must not be null");
-        }
-        if (quantity <= 0) {
-            throw new IllegalArgumentException("Quantity must be a positive integer, got: " + quantity);
-        }
+    public OrderItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
     }

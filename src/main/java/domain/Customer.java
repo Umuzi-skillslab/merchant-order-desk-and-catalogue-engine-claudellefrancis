@@ -1,4 +1,4 @@
-package com.paynetsystem.domain;
+package com.paynestsystem.domain;
 
 public class Customer {
 

@@ -1,5 +1,9 @@
-package com.paynetsystem.payment;
+package com.paynestsystem.payment;
 
+/**
+ * Payment via Electronic Funds Transfer (EFT).
+ * Simulates a successful EFT payment (no real processing).
+ */
 public class EftPayment implements PaymentMethod {
 
     @Override

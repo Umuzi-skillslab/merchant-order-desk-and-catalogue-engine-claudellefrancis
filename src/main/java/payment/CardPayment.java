@@ -1,5 +1,9 @@
-package com.paynetsystem.payment;
+package com.paynestsystem.payment;
 
+/**
+ * Payment via credit or debit card.
+ * Simulates a successful card payment (no real processing).
+ */
 public class CardPayment implements PaymentMethod {
 
     @Override

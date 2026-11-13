@@ -1,3 +1,4 @@
+
 package com.PayNestApplication.app;
 
 import com.PayNestApplication.domain.Customer;
@@ -14,20 +15,22 @@ public class PayNestApplication {
         Product iPad = new Product(3, "iPad", 15000);
         Product keyboard = new Product(4, "Keyboard", 500);
 
-
         Customer customer = new Customer(
-            1,
-            "Claudelle Francis",
-            "claudellefrancis@umuzi.org");
+                1,
+                "Claudelle Francis",
+                "claudellefrancis@umuzi.org"
+        );
 
         Order order = new Order(1, customer);
+
         order.addItem(monitor, 1);
         order.addItem(iPad, 4);
         order.addItem(keyboard, 3);
 
         order.printSummary();
 
-        PayflexPayment paymentMethod = new PayflexPayment();
-        order.checkout((PaymentMethod) (Object) paymentMethod);
+        PaymentMethod paymentMethod = new PayflexPayment();
+
+        order.checkout(paymentMethod);
     }
 }
